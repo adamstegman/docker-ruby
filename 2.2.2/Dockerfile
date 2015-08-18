@@ -11,7 +11,8 @@ ENV LC_ALL en_US.UTF-8
 # Install Ruby
 RUN apt-get -y install \
       git-core wget curl zlib1g-dev build-essential python-software-properties \
-      libssl-dev libreadline-dev libyaml-dev libffi-dev libcurl4-openssl-dev
+      libssl-dev libreadline-dev libyaml-dev libffi-dev libcurl4-openssl-dev \
+      libxml2-dev libxslt-dev
 RUN cd /tmp; \
     wget http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz; \
     tar xf ruby-2.2.2.tar.gz; \

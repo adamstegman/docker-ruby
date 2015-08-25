@@ -19,11 +19,10 @@ RUN cd /tmp; \
     cd ruby-2.2.2; \
     ./configure; \
     make; \
-    make install
+    make install; \
+    # Allow whatever user to install gems
+    chmod 777 -R /usr/local
 RUN gem install bundler --no-ri --no-rdoc
-
-# Allow whatever user to install gems
-RUN chmod 777 -R /usr/local
 
 # Clean up the image
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

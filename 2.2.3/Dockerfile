@@ -14,9 +14,9 @@ RUN apt-get -y install \
       libssl-dev libreadline-dev libyaml-dev libffi-dev libcurl4-openssl-dev \
       libxml2-dev libxslt-dev
 RUN cd /tmp; \
-    wget https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz; \
-    tar xf ruby-2.2.2.tar.gz; \
-    cd ruby-2.2.2; \
+    wget http://ftp.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz; \
+    tar xf ruby-2.2.3.tar.gz; \
+    cd ruby-2.2.3; \
     ./configure; \
     make; \
     make install; \
